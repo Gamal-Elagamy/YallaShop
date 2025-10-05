@@ -1,0 +1,30 @@
+.loader {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 50px;
+  display: inline-grid;
+  height: 100vh;
+}
+.loader:before,
+.loader:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content:"Loading...";
+  grid-area: 1/1;
+
+  /* الألوان الجديدة: أخضر → أزرق */
+  -webkit-mask: linear-gradient(90deg,#10b981 50%,#3b82f600 0) 0 50%/2ch 100%;
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: l11 1s infinite cubic-bezier(0.5,220,0.5,-220);
+}
+.loader:after {
+  -webkit-mask-position:1ch 50%;
+  --s:-1;
+}
+@keyframes l11 {
+  100% { transform: translateY(calc(var(--s,1)*0.1%)); }
+}
