@@ -72,20 +72,20 @@ export default function NavbarComponent() {
       IsLoggedIn &&
        <NavbarContent justify="end">
           <NavbarItem>
-            <Button onPress={logOut} type="button" color="danger" variant="flat">
+            <button onClick={logOut} type="button" className=' p-2 rounded-md  px-4 py-2 text-sm font-semibold bg-red-500' variant="flat">
               Sign Out
-            </Button>
+            </button>
           </NavbarItem>
         </NavbarContent>
      }
       {!IsLoggedIn &&  
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button type="button" className=' bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:from-green-500 hover:to-blue-600 dark:from-green-500 dark:to-blue-600' variant="flat">
+            <button type="button" className=' p-2 rounded-md  px-4 py-2 text-sm font-semibold btn-gradient' variant="flat">
               <NavLink to={"/login"}>
                 Login
               </NavLink>
-            </Button>
+            </button>
           </NavbarItem>
         </NavbarContent>
       }

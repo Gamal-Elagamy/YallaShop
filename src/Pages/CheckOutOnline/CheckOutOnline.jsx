@@ -21,7 +21,7 @@ export default function CheckOutOnline() {
       const {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`,
       {shippingAddress:values},
       { headers:{token:localStorage.getItem("token")},
-      params: { url: "https://yalla-shop.vercel.app/allorders" } 
+      params: { url: "https://yalla-shop.vercel.app" } 
         } 
       )
       setIsLoading(false)
