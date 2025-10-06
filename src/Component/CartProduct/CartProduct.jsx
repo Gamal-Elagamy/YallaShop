@@ -59,7 +59,7 @@ export default function CartProduct({product, setCartId, setCartData, setnumOfCa
               <h2 className="text-md main-text-color mt-2"> <span className='font-bold'>Category</span>:{product.product.category.name}</h2>
               <h2 className="text-md main-text-color mt-2"> <span className='font-bold'>Brand</span>:{product.product.brand.name}</h2>
             </div>
-            <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block">
+            <div className="mt-4 flex items-center  justify-center sm:space-y-6 sm:mt-0 sm:block">
               <div className="flex items-center border-gray-100">
                 <Button
                 isLoading={decrementLoading} 
@@ -118,7 +118,7 @@ export default function CartProduct({product, setCartId, setCartData, setnumOfCa
                       <svg 
                         key={rate} 
                         aria-hidden="true" 
-                        className={`h-5 w-5 ${rate <= product.product.ratingsAverage ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
+                        className={` ml-1 h-5 w-4 ${rate <= product.product.ratingsAverage ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
                         fill="currentColor" 
                         viewBox="0 0 20 20" 
                         xmlns="http://www.w3.org/2000/svg"

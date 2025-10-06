@@ -27,14 +27,14 @@ export default function Footer() {
           </div>
         </nav>
         <div className="flex justify-center mt-8 space-x-6">
-          <a href="https://www.facebook.com/profile.php?id=100000932701737&mibextid=kFxxJD" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
+          <a href="https://www.facebook.com/gamal.elagamy82?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
             <span className="sr-only">Facebook</span>
             <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
               <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
             </svg>
           </a>
           
-          <a href="https://www.linkedin.com/in/gamal-elagamy-778b112a4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
+          <a href="https://www.linkedin.com/in/gamal-abdelnaser-778b112a4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
             <span className="sr-only">LinkedIn</span>
             <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452h-3.554V14.56c0-1.402-.027-3.208-1.954-3.208-1.956 0-2.255 1.527-2.255 3.107v5.993H9.132V9.5h3.412v1.493h.05c.476-.9 1.637-1.85 3.367-1.85 3.599 0 4.265 2.37 4.265 5.457v5.852zM5.337 8.007a2.065 2.065 0 01-2.064-2.064c0-1.141.925-2.064 2.064-2.064 1.139 0 2.064.923 2.064 2.064 0 1.139-.925 2.064-2.064 2.064zM6.824 20.452H3.851V9.5h2.973v10.952zM22.225 0H1.771C.792 0 0 .772 0 1.726v20.548C0 23.227.792 24 1.771 24h20.452C23.205 24 24 23.227 24 22.274V1.726C24 .772 23.205 0 22.225 0z"/>

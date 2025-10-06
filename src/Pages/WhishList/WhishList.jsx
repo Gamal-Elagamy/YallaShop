@@ -62,7 +62,7 @@ export default function WishList() {
         cartData?.map((product) => (
           <div
             key={product._id}
-            className="relative border border-green-300 dark:border-gray-700 w-8/12 container justify-between items-center mb-6 rounded-lg bg-white dark:bg-gray-800 p-6 shadow-md sm:flex sm:justify-start hover:scale-105 transition-all"
+            className="relative border border-green-300 dark:border-gray-700 w-10/12 container justify-between items-center mb-6 rounded-lg bg-white dark:bg-gray-800 p-6 shadow-md sm:flex sm:justify-start hover:scale-105 transition-all"
           >
           
             <Button
@@ -114,7 +114,7 @@ export default function WishList() {
                   {product?.brand?.name || "N/A"}
                 </h2>
 
-              <div className="mt-auto w-6/12 ">
+              <div className="mt-auto w-8/12 ">
                 <Button
                   isLoading={addToCartLoading === product._id}
                   onPress={() => handleAddToCart(product._id)}
