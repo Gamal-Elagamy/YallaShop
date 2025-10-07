@@ -40,7 +40,7 @@ export default function NavbarComponent() {
   return (
     <Navbar className="container" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
-     <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="lg:hidden" />
+       {IsLoggedIn && <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="lg:hidden" />}
         <NavbarBrand>
           <NavLink to="/" className="flex items-center">
             <img src={logo} className="h-8 mr-1" alt="Logo" />
@@ -91,7 +91,9 @@ export default function NavbarComponent() {
       }
 
     {  IsLoggedIn &&
-    <NavbarMenu>
+    <NavbarMenu
+    className="fixed left-0 top-10 bg-transparent w-3/4 p-6 lg:hidden shadow rounded-md"
+    >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} onClick={() => setIsMenuOpen(false)}>
             <NavLink
@@ -99,8 +101,8 @@ export default function NavbarComponent() {
               className={({ isActive }) =>
                 isActive
                   ? "main-header-color font-bold pb-1"
-                  : "text-gray-800 dark:text-gray-300"
-              }
+                  : "text-black dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
+                }
             >
               {item.label}
             </NavLink>
