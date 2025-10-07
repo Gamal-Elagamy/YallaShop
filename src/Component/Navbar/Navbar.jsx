@@ -91,9 +91,7 @@ export default function NavbarComponent() {
       }
 
     {  IsLoggedIn &&
-    <NavbarMenu
-    className="fixed left-0 top-10 bg-transparentrounded-md w-3/4 p-6 lg:hidden shadow rounded-md"
-    >
+    <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} onClick={() => setIsMenuOpen(false)}>
             <NavLink
@@ -101,8 +99,8 @@ export default function NavbarComponent() {
               className={({ isActive }) =>
                 isActive
                   ? "main-header-color font-bold pb-1"
-                  : "text-black dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
-                }
+                  : "text-gray-800 dark:text-gray-300"
+              }
             >
               {item.label}
             </NavLink>
