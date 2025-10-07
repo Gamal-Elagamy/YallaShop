@@ -113,7 +113,7 @@ export default function CartProduct({product, setCartId, setCartData, setnumOfCa
                 + </Button>
               </div>
               
-              <div className="flex items-center mt-3 mr-5">
+              {/* <div className="flex items-center mt-3 mr-5">
                     {[1, 2, 3, 4, 5].map((rate) => (
                       <svg 
                         key={rate} 
@@ -129,7 +129,7 @@ export default function CartProduct({product, setCartId, setCartData, setnumOfCa
                     <span className="ml-2 rounded bg-yellow-500 px-2.5 py-0.5 text-xs font-semibold dark:bg-yellow-300 text-white dark:text-gray-800">
                       {product.product.ratingsAverage}
                     </span>
-                  </div>
+                  </div> */}
             </div>
           </div>
         </div>

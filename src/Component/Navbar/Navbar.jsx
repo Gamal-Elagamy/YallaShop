@@ -40,7 +40,7 @@ export default function NavbarComponent() {
   return (
     <Navbar className="container" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
-       {IsLoggedIn && <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="lg:hidden" />}
+     <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="lg:hidden" />
         <NavbarBrand>
           <NavLink to="/" className="flex items-center">
             <img src={logo} className="h-8 mr-1" alt="Logo" />
