@@ -92,7 +92,7 @@ export default function NavbarComponent() {
 
     {  IsLoggedIn &&
     <NavbarMenu
-    className="fixed left-0 top-10 bg-transparent w-3/4 p-6 lg:hidden shadow rounded-md"
+    className="fixed left-0 top-10 bg-transparentrounded-md w-3/4 p-6 lg:hidden shadow rounded-md"
     >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} onClick={() => setIsMenuOpen(false)}>
