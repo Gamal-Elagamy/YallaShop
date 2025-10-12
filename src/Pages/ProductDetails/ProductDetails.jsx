@@ -31,19 +31,27 @@ useEffect(() => {
 }, [ProductDetails?.id]);
 
 const handleWishlist = async () => {
-  setWishListLoading(true);
   try {
+    setWishListLoading(true);
     if (addedToWishlist) {
-      await clearWishList(ProductDetails?.id);
-      setAddedToWishlist(false);
+      const data = await clearWishList(ProductDetails?.id, setWishListLoading);
+      if (data?.status === "success") {
+        setAddedToWishlist(false);
+      }
     } else {
-      await addProductWishList(ProductDetails?.id);
-      setAddedToWishlist(true);
+      const data = await addProductWishList(ProductDetails?.id, setWishListLoading);
+      if (data?.status === "success") {
+        setAddedToWishlist(true);
+      }
     }
+  } catch (error) {
+    const msg = error.response?.data?.message || "Something went wrong";
+    showToast("error", msg);
   } finally {
     setWishListLoading(false);
   }
 };
+
 
 
     useEffect(()=>{

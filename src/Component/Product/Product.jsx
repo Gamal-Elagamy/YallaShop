@@ -22,12 +22,24 @@ export default function Product({ product }) {
   }, [product._id]);
 
   const handleWishlist = async () => {
-    if (addedToWishlist) {
-      await clearWishList(product._id, setWishListLoading);
-      setAddedToWishlist(false);
-    } else {
-      await addProductWishList(product._id, setWishListLoading);
-      setAddedToWishlist(true);
+    try {
+      setWishListLoading(true);
+      if (addedToWishlist) {
+        const data = await clearWishList(product?.id, setWishListLoading);
+        if (data?.status === "success") {
+          setAddedToWishlist(false);
+        }
+      } else {
+        const data = await addProductWishList(product?.id, setWishListLoading);
+        if (data?.status === "success") {
+          setAddedToWishlist(true);
+        }
+      }
+    } catch (error) {
+      const msg = error.response?.data?.message ;
+      showToast("error", msg);
+    } finally {
+      setWishListLoading(false);
     }
   };
 
